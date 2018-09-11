@@ -43,7 +43,7 @@ public class Larik2 {
         }
         System.out.println(" ");
         System.out.println(" DATA : "+Larik.BinarySearch(larik, kunci));
-        
+        System.out.println(" DATA");
             
         }
         
