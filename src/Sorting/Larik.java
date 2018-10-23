@@ -6,7 +6,7 @@ package Sorting;
 
 /**
  *
- * @author basisc19la
+ * @author melio
  */
 public class Larik {
 
