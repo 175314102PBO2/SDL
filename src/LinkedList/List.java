@@ -59,16 +59,18 @@ public class List {
 
     public ListNode RemoveLast() {      //hapus di akhir
         ListNode bantuan = new ListNode();
+        
         if (isEmpty() == false) {
             bantuan = firstNode;
             while (bantuan.getNext() != lastNode) {
-                bantuan = bantuan.getNext();
+                bantuan = bantuan.getNext();        //next itu sisi sebelah kanan 
             }
             lastNode = bantuan;
             bantuan = bantuan.getNext();
             lastNode.setNext(null);
-            size--;
+            size--;     //karena remove, sehingga size dikurangi satu.
             return bantuan;
+            
         } else {
             return null;
         }
