@@ -58,23 +58,26 @@ public class List {
     }
 
     public ListNode RemoveLast() {      //hapus di akhir
-        ListNode bantuan = new ListNode();
-        
+        ListNode bantuan = null;
+
         if (isEmpty() == false) {
-            bantuan = firstNode;
-            firstNode = lastNode = null;
-            while (bantuan.getNext() != lastNode) {
-                bantuan = bantuan.getNext();        //next itu sisi sebelah kanan 
+            if (firstNode == lastNode) {
+                bantuan = firstNode;
+                firstNode = lastNode = null;
+            } else {
+                bantuan = firstNode;
+                while (bantuan.getNext() != lastNode) {
+                    bantuan = bantuan.getNext();
+                }
+                lastNode = bantuan;
+                bantuan = bantuan.getNext();
+                lastNode.setNext(null);
+
             }
-            lastNode = bantuan;
-            bantuan = bantuan.getNext();
-            lastNode.setNext(null);
             size--;     //karena remove, sehingga size dikurangi satu.
-            return bantuan;
-            
-        } else {
-            return null;
+
         }
+        return bantuan;
     }
 
     public boolean isEmpty() {
@@ -87,7 +90,7 @@ public class List {
 
     @Override
     public String toString() {     //buat cetak yang ada dlm list{
-        String isi = "";
+        String isi = " ";
         ListNode pointer = firstNode;
         while (pointer != null) {
             isi += pointer.getData() + " ";
