@@ -51,7 +51,7 @@ public class List {
             bantu = firstNode;
             firstNode = firstNode.getNext();
         }
-        size--;
+        size--;     //ketika remove, maka size dikuangi
         return bantu;
 
     }
