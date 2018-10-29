@@ -47,7 +47,7 @@ public class List {
     public ListNode RemoveFirst() {    //hapus di awal
         ListNode bantu = new ListNode();
 
-        if (isEmpty() == false) {
+        if (isEmpty() == false) {       //ketika Listnya berisi
             bantu = firstNode;
             firstNode = firstNode.getNext();
         }
