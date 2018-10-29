@@ -62,6 +62,7 @@ public class List {
         
         if (isEmpty() == false) {
             bantuan = firstNode;
+            firstNode = lastNode = null;
             while (bantuan.getNext() != lastNode) {
                 bantuan = bantuan.getNext();        //next itu sisi sebelah kanan 
             }
