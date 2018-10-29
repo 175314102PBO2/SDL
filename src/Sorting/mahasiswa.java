@@ -48,23 +48,23 @@ public class mahasiswa implements Comparable {  //untuk membandingkan sebuah tip
         //method untuk mengubah data menjadi objek mahasiswa
         mahasiswa key = (mahasiswa) o;
 
-//        if (this.nama.compareTo(key.getNama()) == 0) {
-//            return 0;
-//        } else if (this.nama.compareTo(key.getNama()) > 0) {
-//            return 1;
-//        } else {
-//            return -1;
-//        }
-        
-        
-                //proses dibawah ini digunakan untuk membadingkan NIM 
-        if (this.NIM == key.getNIM()) {
-            return 0;       //karena sama dengan shg return 0
-        } else if (this.NIM > key.getNIM()) {
-            return 1;       //karena lebih besar jadi return 1
+        if (this.nama.compareTo(key.getNama()) == 0) {
+            return 0;
+        } else if (this.nama.compareTo(key.getNama()) > 0) {
+            return 1;
         } else {
-            return -1;      //karena kurang dari jadi return -1
+            return -1;
         }
+        
+        
+//                //proses dibawah ini digunakan untuk membadingkan NIM 
+//        if (this.NIM == key.getNIM()) {
+//            return 0;       //karena sama dengan shg return 0
+//        } else if (this.NIM > key.getNIM()) {
+//            return 1;       //karena lebih besar jadi return 1
+//        } else {
+//            return -1;      //karena kurang dari jadi return -1
+//        }
     }
     }
 
