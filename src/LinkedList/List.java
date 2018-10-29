@@ -26,7 +26,7 @@ public class List {
             firstNode = baru;
             lastNode = baru;
         } else {
-            baru.setNext(firstNode);
+            baru.setNext(firstNode);        //Next adalah sisi sebelah kanannya.
             firstNode = baru;
         }
         size++;
