@@ -50,6 +50,7 @@ public class List {
         if (isEmpty() == false) {       //ketika Listnya berisi
             bantu = firstNode;
             firstNode = firstNode.getNext();
+
         }
         size--;     //ketika remove, maka size dikuangi
         return bantu;
