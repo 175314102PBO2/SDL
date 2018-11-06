@@ -8,13 +8,13 @@ package LinkedList;
  *
  * @author basisc15la
  */
-public class List {
+public class LinkedList {
 
     private ListNode firstNode;
     private ListNode lastNode;
     private int size;
 
-    public List() {
+    public LinkedList() {
         this.firstNode = null;
         this.lastNode = null;
         this.size = 0;

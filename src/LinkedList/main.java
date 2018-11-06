@@ -22,7 +22,7 @@ public class main {
 //        System.out.println(daftar.toString());
 //        System.out.println(" Size : " + daftar.getSize());
 //
-        List daftar = new List();
+        LinkedList daftar = new LinkedList();
         daftar.AddFirst(78);
         daftar.AddFirst(33);
         daftar.AddFirst(12);
