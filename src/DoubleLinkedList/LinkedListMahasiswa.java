@@ -9,13 +9,13 @@ package DoubleLinkedList;
  *
  * @author ACER
  */
-public class LinkedList {
-
+public class LinkedListMahasiswa {
+    
     private ListNode head;
-    private int size;
+    private mahasiswa size;
 
     //Linkedlist daftar = new LinkedList();
-    public LinkedList() {
+    public LinkedListMahasiswa() {
         head = new ListNode();
         head.setNext(head);
         head.setPrev(head);

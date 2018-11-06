@@ -5,6 +5,8 @@
  */
 package DoubleLinkedList;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ACER
@@ -12,25 +14,26 @@ package DoubleLinkedList;
 public class Main {
 
     public static void main(String[] args) {
-        //        List daftar = new List();
-//        daftar.RemoveLast();
-//        System.out.println(daftar.toString());
-//        System.out.println(" Size : "+daftar.getSize());
-//
-//        List daftar = new List();
-//        daftar.AddFirst(78);
-//        daftar.RemoveLast();
-//        System.out.println(daftar.toString());
-//        System.out.println(" Size : " + daftar.getSize());
-//
         LinkedList daftar = new LinkedList();
+
         daftar.addFirst(123);
         daftar.addLast(111);
         daftar.addFirst(120);
+        daftar.addLast(114);
         daftar.removeFirst();
-
+        daftar.removeLast();
         System.out.println(daftar.toString());
         System.out.println(" Size : " + daftar.getSize());
+        System.out.println("----------------------------------------------------");
+        
+        System.out.println(" Data yang dicari di index ke : "+daftar.Search(123));
+        System.out.println("----------------------------------------------------");
+        
+        daftar.removeMid(123);
+        System.out.println(daftar.toString());
+        System.out.println("Size : "+daftar.getSize());
+        System.out.println("----------------------------------------------------");
+  
 
     }
 }
