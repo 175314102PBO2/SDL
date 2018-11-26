@@ -12,42 +12,31 @@ import java.util.Arrays;
  * @author basisc23lb
  */
 public class test_mahasiswa {
-    
+
     public static void main(String[] args) {
-//        mahasiswa[] data = {new mahasiswa(" Budi ", 175314089),
-//            new mahasiswa(" Redy ", 175314118),
-//            new mahasiswa(" Frida ", 175314058),
-//            new mahasiswa(" Aldy ", 175314044)};
-//
-//        System.out.println(" Algoritma Sequential Search ");
-//        System.out.println(" Algoritma Binary Search ");
-//        mahasiswa key = new mahasiswa(" Aldy ", 175314044); //berdasarkan NIM
-////         mahasiswa key = new mahasiswa(" Aldy ", 0);    //berdasarkan NAMA
-//
-////        int result = Larik.sequentialsearch(data, key);
-//        int result = Larik.Binarysearch(data, key);
-//
-//        if (result >= 0) {
-//            System.out.println(" Data Ketemu di Index ke : " + result);
-//        } else {
-//            System.out.println(" Data Tidak Ditemukan ");
-//        }
-        mahasiswa[] mhs = {new mahasiswa(" Cindy ", 105314002),
-            new mahasiswa(" Sari ", 105314001),
-            new mahasiswa(" Ralph ", 105314007),
-            new mahasiswa(" Ronny ", 105314009),
-            new mahasiswa(" Yessy ", 105314005),
-            new mahasiswa(" Vina ", 105314012)};
-//           mahasiswa key = new mahasiswa(" Yessy ", 0);
-            mahasiswa key = new mahasiswa(" ", 105314007);
-//        int result = Larik.sequentialsearch(data, key);
-        int result = Larik.Binarysearch(mhs, key);
+        LinkedListObject mhs = new LinkedListObject();
         
-        if (result>= 0) {
-            System.out.println(" Data Ketemu di Index ke : " + result);
-        } else {
-            System.out.println(" Data Tidak Ditemukan ");
-            
-        }
+        mhs.addFirst(new mahasiswa(" Tamelio ", 175314102));
+        mhs.addFirst(new mahasiswa(" Tamel ", 175314104));
+        mhs.addLast(new mahasiswa(" Amelio ", 175314106));
+        mhs.addFirst(new mahasiswa(" Melio ", 175314108));
+        mhs.addLast(new mahasiswa(" Amelia ", 175314110));
+        mhs.addLast(new mahasiswa(" Gwen ", 175314112));
+
+        System.out.println(" List Daftar Mahasiswa adalah :  ");
+        System.out.println(" " + mhs.toString() + " ");
+        System.out.println("  size " + mhs.getSize());
+        System.out.println();
+
+        System.out.println(" Data Pertama Dihapus : ");
+        mhs.removeFirst();
+        System.out.println(mhs.toString());
+        System.out.println("");
+
+        mahasiswa key = new mahasiswa("  ", 175314112);
+        System.out.println(" Mahasiswa Dicari            : " + key.getNIM());
+
+        System.out.println(" Data Terdapat pada index ke : "+mhs.Search(key));
+
     }
 }
